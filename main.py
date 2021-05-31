@@ -27,7 +27,6 @@ emb.add_field(name="Name" , value="\
 inline=False) 
 emb.set_footer(text="text" , icon_url = "icon_url") #input icon url and text
 
-my_secret = os.environ['TOKEN'] #go to Secrets(Environment variables) Then put whatever you want as the 
-key for me I have used "token" then you can use that key to access the thing. In the "values" section you input the bots token.
+my_secret = os.environ['TOKEN'] #go to Secrets(Environment variables) Then put whatever you want as the key for me I have used "token" then you can use that key to access the thing. In the "values" section you input the bots token.
 
 bot.run(my_secret) #run the bot.
