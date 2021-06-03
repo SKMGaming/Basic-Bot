@@ -6,6 +6,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot 
 import os 
+import json 
 
 @bot.command()
 @commands.has_permissions(kick_members=True)#ONLY PEOPLE WITH KICK PERMISSIONS CAN KICK
@@ -59,7 +60,7 @@ async def warn(ctx,user:discord.User,*reason:str): #warn a user format: !warn @u
       'name':user.name,
       'reasons': [reason,]
     })
-  with open('reports.json','w+') as f:
+  with open('reports.json','w+') as f: #Create a file called reports.json to store warns.
     json.dump(report,f)
 
   with open('reports.json','w+') as f:
